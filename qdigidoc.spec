@@ -30,7 +30,7 @@ Estonia where they are used for storing legally binding digital signatures.
 
 %package	nautilus
 Summary:	Nautilus extension for %{name}
-Group:		User Interface/Desktops
+Group:		Graphical desktop/GNOME
 Requires:	%{name} = %{version}-%{release}
 Requires:	nautilus-python
 
