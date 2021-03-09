@@ -1,24 +1,24 @@
-%define version 0.4.0
-%define rel 1
-%define release %mkrel %rel
-
 Name:		qdigidoc
-Version:	%{version}
-Release:	%{release}
+Version:	4.2.8
+Release:	1
 Summary:	Estonian digital signature application
 
 Group:		Office
 License:	LGPLv2+
-URL:		http://code.google.com/p/esteid
-Source0:	http://esteid.googlecode.com/files/%{name}-%{version}.tar.bz2
-BuildRoot:	%{_tmppath}/%{name}-%{version}-%{release}-root-%(%{__id_u} -n)
+URL:		https://github.com/open-eid/DigiDoc4-Client
+Source0:	https://github.com/open-eid/DigiDoc4-Client/releases/download/v%{version}/qdigidoc4-%{version}.tar.gz
 
 BuildRequires:	cmake
 BuildRequires:	libdigidoc-devel
 BuildRequires:	libdigidocpp-devel
 BuildRequires:	openldap-devel
-BuildRequires:	openssl-devel
-BuildRequires:	qt4-devel
+BuildRequires:  pkgconfig(openssl)
+BuildRequires:  pkgconfig(Qt5Svg)
+BuildRequires:  pkgconfig(Qt5Core)
+BuildRequires:  pkgconfig(Qt5Designer)
+BuildRequires:  pkgconfig(libpcsclite) >= 1.7
+
+Requires:       hicolor-icon-theme
 Requires:	opensc
 
 
