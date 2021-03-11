@@ -25,23 +25,10 @@ BuildRequires:  pkgconfig(libpcsclite) >= 1.7
 Requires:       hicolor-icon-theme
 Requires:	opensc
 
-
 %description
 QDigiDoc is an application for digitally signing and encrypting documents in
 BDoc, DDoc, and CDoc container formats. These file formats are widespread in
 Estonia where they are used for storing legally binding digital signatures.
-
-
-%package	nautilus
-Summary:	Nautilus extension for %{name}
-Group:		Graphical desktop/GNOME
-Requires:	%{name} = %{version}-%{release}
-Requires:	nautilus-python
-
-
-%description	nautilus
-The %{name}-nautilus package contains the %{name} extension for the
-nautilus file manager.
 
 
 %prep
@@ -57,8 +44,6 @@ nautilus file manager.
 %install
 %make_install -C build
 
-%find_lang nautilus-qdigidoc
-
 %clean
 rm -rf $RPM_BUILD_ROOT
 
@@ -70,12 +55,6 @@ rm -rf $RPM_BUILD_ROOT
 %{_datadir}/mime/packages/*.xml
 %{_datadir}/icons/hicolor/*/*/*.png
 #{_datadir}/kde4/services/*.desktop
-
-%files nautilus -f nautilus-qdigidoc.lang
-%defattr(-,root,root,-)
-%{_libdir}/nautilus/extensions-2.0/python/*
-
-
 
 
 %changelog
