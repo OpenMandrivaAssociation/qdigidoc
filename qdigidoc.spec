@@ -34,7 +34,7 @@ Estonia where they are used for storing legally binding digital signatures.
 Summary:	Nautilus extension for %{name}
 Group:		Graphical desktop/GNOME
 Requires:	%{name} = %{version}-%{release}
-Requires:	nautilus-python
+Recommends:	nautilus-python
 
 %description	nautilus
 The %{name}-nautilus package contains the %{name} extension for the
