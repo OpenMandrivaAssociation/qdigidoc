@@ -13,6 +13,7 @@ BuildRequires:  qmake5
 BuildRequires:	libdigidocpp-devel
 BuildRequires:	openldap-devel
 BuildRequires:  pkgconfig(openssl)
+BuildRequires:  cmake(Qt5LinguistTools)
 BuildRequires:  pkgconfig(Qt5Svg)
 BuildRequires:  pkgconfig(Qt5Core)
 BuildRequires:  pkgconfig(Qt5Designer)
