@@ -40,7 +40,7 @@ nautilus file manager.
 
 
 %prep
-%setup -q
+%setup -q -n qdigidoc4-%{version}
 
 
 %build
