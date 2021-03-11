@@ -9,7 +9,6 @@ URL:		https://github.com/open-eid/DigiDoc4-Client
 Source0:	https://github.com/open-eid/DigiDoc4-Client/releases/download/v%{version}/qdigidoc4-%{version}.tar.gz
 
 BuildRequires:	cmake
-BuildRequires:	libdigidoc-devel
 BuildRequires:	libdigidocpp-devel
 BuildRequires:	openldap-devel
 BuildRequires:  pkgconfig(openssl)
