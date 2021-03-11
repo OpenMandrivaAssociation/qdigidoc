@@ -1,0 +1,22 @@
+diff -urdN qdigidoc4-orig/client/widgets/CheckBox.cpp qdigidoc4/client/widgets/CheckBox.cpp
+--- qdigidoc4-orig/client/widgets/CheckBox.cpp	2021-02-25 19:08:46.000000000 +0100
++++ qdigidoc4/client/widgets/CheckBox.cpp	2021-03-08 13:52:09.509577163 +0100
+@@ -22,6 +22,7 @@
+ #include <QBrush>
+ #include <QPaintEvent>
+ #include <QPainter>
++#include <QPainterPath>
+ #include <QStyleOptionButton>
+ 
+ CheckBox::CheckBox(QWidget *parent)
+diff -urdN qdigidoc4-orig/client/widgets/MainAction.cpp qdigidoc4/client/widgets/MainAction.cpp
+--- qdigidoc4-orig/client/widgets/MainAction.cpp	2021-02-25 19:08:46.000000000 +0100
++++ qdigidoc4/client/widgets/MainAction.cpp	2021-03-08 14:07:09.946739121 +0100
+@@ -24,6 +24,7 @@
+ 
+ #include <QtCore/QSettings>
+ #include <QtGui/QPainter>
++#include <QtGui/QPainterPath>
+ #include <QtGui/QPaintEvent>
+ 
+ using namespace ria::qdigidoc4;
