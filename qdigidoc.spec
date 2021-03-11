@@ -50,33 +50,26 @@ nautilus file manager.
 
 
 %build
-mkdir -p %{_target_platform}
-pushd %{_target_platform}
-%{cmake} ../..
-popd
+%cmake
 
-%make -C %{_target_platform}/build
-
+%make_build
 
 %install
-rm -rf $RPM_BUILD_ROOT
-%makeinstall_std -C %{_target_platform}/build
+%make_install -C build
 
 %find_lang nautilus-qdigidoc
-
 
 %clean
 rm -rf $RPM_BUILD_ROOT
 
-
 %files
 %defattr(-,root,root,-)
-%doc AUTHORS COPYING NEWS README
+%doc COPYING README.md
 %{_bindir}/*
 %{_datadir}/applications/*.desktop
 %{_datadir}/mime/packages/*.xml
 %{_datadir}/icons/hicolor/*/*/*.png
-%{_datadir}/kde4/services/*.desktop
+#{_datadir}/kde4/services/*.desktop
 
 %files nautilus -f nautilus-qdigidoc.lang
 %defattr(-,root,root,-)
