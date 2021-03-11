@@ -30,6 +30,16 @@ QDigiDoc is an application for digitally signing and encrypting documents in
 BDoc, DDoc, and CDoc container formats. These file formats are widespread in
 Estonia where they are used for storing legally binding digital signatures.
 
+%package	nautilus
+Summary:	Nautilus extension for %{name}
+Group:		Graphical desktop/GNOME
+Requires:	%{name} = %{version}-%{release}
+Requires:	nautilus-python
+
+%description	nautilus
+The %{name}-nautilus package contains the %{name} extension for the
+nautilus file manager.
+
 
 %prep
 %setup -q -n qdigidoc4
@@ -44,6 +54,8 @@ Estonia where they are used for storing legally binding digital signatures.
 %install
 %make_install -C build
 
+%find_lang nautilus-qdigidoc
+
 %clean
 rm -rf $RPM_BUILD_ROOT
 
@@ -54,7 +66,12 @@ rm -rf $RPM_BUILD_ROOT
 %{_datadir}/applications/*.desktop
 %{_datadir}/mime/packages/*.xml
 %{_datadir}/icons/hicolor/*/*/*.png
-#{_datadir}/kde4/services/*.desktop
+%{_datadir}/kservices5/qdigidoc-signer.desktop
+
+%files nautilus -f nautilus-qdigidoc.lang
+#{_datadir}/locale/*/LC_MESSAGES/nautilus-qdigidoc.mo
+%{_mandir}/man1/qdigidoc4.1.*
+%{_datadir}/nautilus-python/extensions/nautilus-qdigidoc.py
 
 
 %changelog
