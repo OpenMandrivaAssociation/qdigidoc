@@ -17,6 +17,7 @@ BuildRequires:  pkgconfig(Qt5Svg)
 BuildRequires:  pkgconfig(Qt5Core)
 BuildRequires:  pkgconfig(Qt5Designer)
 BuildRequires:  pkgconfig(Qt5Network)
+BuildRequires:  pkgconfig(Qt5PrintSupport)
 BuildRequires:  pkgconfig(libpcsclite) >= 1.7
 
 Requires:       hicolor-icon-theme
