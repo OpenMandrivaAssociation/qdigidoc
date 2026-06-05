@@ -1,6 +1,6 @@
 Name:		qdigidoc
 Version:	4.2.8
-Release:	1
+Release:	2
 Summary:	Estonian digital signature application
 
 Group:		Office
