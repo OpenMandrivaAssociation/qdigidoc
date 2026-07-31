@@ -1,13 +1,13 @@
 Name:		qdigidoc
-Version:	4.2.8
-Release:	2
+Version:	4.10.0
+Release:	1
 Summary:	Estonian digital signature application
 
 Group:		Office
 License:	LGPLv2+
 URL:		https://github.com/open-eid/DigiDoc4-Client
 Source0:	https://github.com/open-eid/DigiDoc4-Client/releases/download/v%{version}/qdigidoc4-%{version}.tar.gz
-Patch0:   qdigidoc-4.2.8-fix-build-with-qt-5.15-include-QPainterPath.patch
+# dropped (no longer applies): Patch0:   qdigidoc-4.10.0-fix-build-with-qt-5.15-include-QPainterPath.patch
 
 BuildRequires:	cmake
 BuildRequires:  qmake5
@@ -42,7 +42,7 @@ nautilus file manager.
 
 
 %prep
-%setup -q -n qdigidoc4
+%setup -q -n qdigidoc4-4.10.0
 %autopatch -p1
 
 
